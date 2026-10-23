@@ -38,13 +38,13 @@
 <h2>무엇을 하나</h2>
 <ul>
   <li>채널 주인이 PC 에서 명령을 실행하면, 채널 주인이 확인한 영상 파일·제목·설명·태그·공개 범위를 YouTube Data API 로 채널 「보통의 질문」에 올리고, 썸네일과 자막 트랙을 붙입니다.</li>
-  <li>올린 영상의 공개 상태와 처리 상태를 조회합니다.</li>
+  <li>올린 영상의 공개 상태와 처리 상태를 조회하고, 채널 주인이 '처리가 끝나면 공개'를 고르면 처리가 끝난 뒤 그 영상을 공개로 바꿉니다.</li>
   <li>채널 주인의 영상에 달린 공개 댓글 가운데 채널이 아직 답하지 않은 것을 찾아 보여 주고, 채널 주인이 지시하면 채널 이름으로 답글을 답니다.</li>
   <li>공개 범위는 기본이 '비공개'이며, 채널 주인이 고른 값만 씁니다.</li>
 </ul>
 
 <h2>왜 Google 계정 권한이 필요한가</h2>
-<p>채널 주인의 채널에 영상·썸네일·자막을 올리려면 그 채널 계정의 승인이 필요합니다. 그래서 YouTube 권한 두 가지(<code>youtube.upload</code>, <code>youtube.force-ssl</code>)를 요청합니다. 영상·썸네일을 올리는 데는 <code>youtube.upload</code> 를, 자막 트랙을 올리고(이 작업은 이 권한만 받습니다) 토큰이 「보통의 질문」 채널의 것인지 확인하고 올린 영상의 처리 상태를 보고 내 채널 영상의 댓글을 읽어 답글을 다는 데는 <code>youtube.force-ssl</code> 을 씁니다. 내 채널 영상의 공개 댓글 말고는 구독자·분석 정보나 다른 채널의 정보에 접근하지 않습니다. 승인한 계정이 「보통의 질문」 채널이 아니면 아무것도 올리지 않습니다. 받은 정보를 어떻게 쓰고 저장하는지는 <a href="privacy.html">개인정보처리방침</a>에 적었습니다.</p>
+<p>채널 주인의 채널에 영상·썸네일·자막을 올리려면 그 채널 계정의 승인이 필요합니다. 그래서 YouTube 권한 두 가지(<code>youtube.upload</code>, <code>youtube.force-ssl</code>)를 요청합니다. 영상·썸네일을 올리는 데는 <code>youtube.upload</code> 를, 자막 트랙을 올리고(이 작업은 이 권한만 받습니다) 토큰이 「보통의 질문」 채널의 것인지 확인하고 올린 영상의 처리 상태를 보고, 채널 주인이 고른 경우 처리가 끝난 영상을 공개로 바꾸고(videos.update), 내 채널 영상의 댓글을 읽어 답글을 다는 데는 <code>youtube.force-ssl</code> 을 씁니다. 내 채널 영상의 공개 댓글 말고는 구독자·분석 정보나 다른 채널의 정보에 접근하지 않습니다. 승인한 계정이 「보통의 질문」 채널이 아니면 아무것도 올리지 않습니다. 받은 정보를 어떻게 쓰고 저장하는지는 <a href="privacy.html">개인정보처리방침</a>에 적었습니다.</p>
 
 <h2>누가 쓰나</h2>
 <p>사용자는 채널 주인 한 명(<code>kado79.youtube@gmail.com</code>)뿐입니다. 채널 주인의 PC 에서만 실행되는 명령줄 도구이고, 다른 사람이 가입하거나 로그인하는 서비스가 아니며, 별도 서버가 없습니다.</p>
@@ -68,13 +68,13 @@
 <h2>What it does</h2>
 <ul>
   <li>When the channel owner runs a command on the owner's PC, it uploads the video file, title, description, tags and privacy setting the owner has reviewed to the 「보통의 질문」 channel through the YouTube Data API, and adds the thumbnail and caption track.</li>
-  <li>It checks the privacy status and processing status of uploaded videos.</li>
+  <li>It checks the privacy status and processing status of uploaded videos and, when the owner chooses "make public when processing finishes", makes the video public after processing.</li>
   <li>It finds public comments on the owner's videos that the channel has not yet answered, and, when the owner tells it to, posts replies as the channel.</li>
   <li>The default privacy status is "private"; only the value the owner chooses is used.</li>
 </ul>
 
 <h2>Why it needs Google account access</h2>
-<p>Uploading videos, thumbnails and captions to the owner's channel requires authorization from that channel's account, so the app requests two YouTube scopes (<code>youtube.upload</code> and <code>youtube.force-ssl</code>). <code>youtube.upload</code> is used to upload videos and thumbnails; <code>youtube.force-ssl</code> is used to upload caption tracks (which requires this scope), to confirm the token belongs to the 「보통의 질문」 channel, to check the processing status of uploaded videos, and to read comments on the owner's own videos and post replies. Apart from public comments on the owner's own videos, the app does not access subscriber or analytics data or other channels' information. If the authorized account is not the 「보통의 질문」 channel, nothing is uploaded. How the received information is used and stored is described in the <a href="privacy.html#en">Privacy Policy</a>.</p>
+<p>Uploading videos, thumbnails and captions to the owner's channel requires authorization from that channel's account, so the app requests two YouTube scopes (<code>youtube.upload</code> and <code>youtube.force-ssl</code>). <code>youtube.upload</code> is used to upload videos and thumbnails; <code>youtube.force-ssl</code> is used to upload caption tracks (which requires this scope), to confirm the token belongs to the 「보통의 질문」 channel, to check the processing status of uploaded videos, to make a processed video public when the owner chose it (videos.update), and to read comments on the owner's own videos and post replies. Apart from public comments on the owner's own videos, the app does not access subscriber or analytics data or other channels' information. If the authorized account is not the 「보통의 질문」 channel, nothing is uploaded. How the received information is used and stored is described in the <a href="privacy.html#en">Privacy Policy</a>.</p>
 
 <h2>Who uses it</h2>
 <p>The only user is the channel owner (<code>kado79.youtube@gmail.com</code>). It is a command-line tool that runs only on the owner's PC; it is not a service that other people sign up for or sign in to, and it has no server.</p>
