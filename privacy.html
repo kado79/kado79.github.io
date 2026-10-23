@@ -32,7 +32,7 @@
 <main>
 
 <h1>보통의 질문 업로더 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 21일(같은 날 개정 — 댓글 답글 기능 추가) · 연락처: <a href="mailto:kado79.youtube@gmail.com">kado79.youtube@gmail.com</a></p>
+<p class="meta">시행일: 2026년 10월 23일(처리가 끝난 뒤 공개로 바꾸는 호출을 3·4절에 적음 — 이전 판 2026년 10월 21일) · 연락처: <a href="mailto:kado79.youtube@gmail.com">kado79.youtube@gmail.com</a></p>
 <p class="lang-nav"><a href="#en">English version below</a> · <a href="./">앱 홈페이지</a></p>
 
 <h2 id="ko-1">1. 이 앱은 무엇인가</h2>
@@ -54,7 +54,7 @@
 <table>
   <tr><th>권한 범위</th><th>쓰는 곳</th></tr>
   <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>영상 올리기(videos.insert), 썸네일 지정(thumbnails.set)</td></tr>
-  <tr><td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td><td>자막 트랙 올리기(captions.insert), 내 채널 확인(channels.list mine), 올린 영상의 상태 조회(videos.list), 내 채널 영상에 달린 댓글 읽기(commentThreads.list, comments.list)와 채널 이름으로 답글 달기(comments.insert)</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td><td>자막 트랙 올리기(captions.insert), 내 채널 확인(channels.list mine), 올린 영상의 상태 조회(videos.list), 내 채널 영상에 달린 댓글 읽기(commentThreads.list, comments.list)와 채널 이름으로 답글 달기(comments.insert), 올린 영상의 공개 범위를 처리가 끝난 뒤 공개로 바꾸기(videos.update, status 부분만)</td></tr>
 </table>
 </div>
 <p>이 밖에 공개 정보인 영상 카테고리 목록(videoCategories.list)을 조회해 '교육' 카테고리를 쓸 수 있는지 확인합니다.</p>
@@ -75,7 +75,7 @@
   </tr>
   <tr>
     <td>채널 주인이 올리는 콘텐츠(영상 파일, 제목, 설명, 태그, 카테고리(교육), 제목·오디오 언어(한국어), 공개 범위·예약 공개 시각, 아동용 아님 표시, 합성 콘텐츠 신고 여부, 퍼가기 허용, 표준 YouTube 라이선스, 구독자에게 새 영상 알림 보내기, 썸네일 이미지, 자막 파일과 자막 트랙 이름(「한국어」)·언어(한국어)·바로 게시)</td>
-    <td>채널 주인이 확인하고 실행을 지시한 경우에만 YouTube 로 보냅니다. 공개 범위는 기본이 '비공개'이며 채널 주인이 고른 값만 씁니다.</td>
+    <td>채널 주인이 확인하고 실행을 지시한 경우에만 YouTube 로 보냅니다. 공개 범위는 기본이 '비공개'이며 채널 주인이 고른 값만 씁니다. 채널 주인이 '처리가 끝나면 공개'를 고른 경우에만, 처리가 끝난 뒤 그 영상의 공개 범위를 '공개'로 바꿔 보냅니다(이미 보낸 아동용·라이선스·퍼가기 값은 그대로 함께 보냅니다).</td>
     <td>채널 주인이 만든 원본 파일이 채널 주인 PC 에 있습니다. 이 앱이 따로 복사해 두지 않습니다.</td>
   </tr>
   <tr>
@@ -143,7 +143,8 @@
 
 <h2 id="ko-11">11. 시행일과 변경</h2>
 <ul>
-  <li>이 방침은 2026년 10월 21일부터 적용합니다. 같은 날 댓글 읽기·답글 달기를 더하며 3·4·5·6·9절을 고쳤고, 이 기능을 쓰기 전에 채널 주인의 동의를 다시 받습니다.</li>
+  <li>이 방침은 2026년 10월 21일부터 적용했습니다. 같은 날 댓글 읽기·답글 달기를 더하며 3·4·5·6·9절을 고쳤고, 이 기능을 쓰기 전에 채널 주인의 동의를 다시 받았습니다.</li>
+  <li>2026년 10월 23일: 이 앱이 이미 하던 '처리가 끝난 뒤 공개로 바꾸기'(videos.update)가 3절 권한 표와 4절에 빠져 있어 적었습니다. 앱이 하는 일이나 다루는 정보가 늘어난 것은 아니며, 이 판에 대해 채널 주인의 동의를 다시 받습니다.</li>
   <li>방침을 바꾸면 이 페이지를 고치고 위의 시행일을 새 날짜로 바꿉니다. 정보를 새로운 방식이나 목적으로 쓰게 되면, 그렇게 쓰기 전에 바뀐 방침을 알리고 다시 동의를 받습니다.</li>
 </ul>
 
@@ -151,7 +152,7 @@
 
 <section id="en" lang="en">
 <h1>Botong Question Uploader (보통의 질문 업로더) Privacy Policy</h1>
-<p class="meta">Effective date: October 21, 2026 (revised the same day to add comment replies) · Contact: <a href="mailto:kado79.youtube@gmail.com">kado79.youtube@gmail.com</a></p>
+<p class="meta">Effective date: October 23, 2026 (sections 3 and 4 now list the call that makes a processed video public — previous version October 21, 2026) · Contact: <a href="mailto:kado79.youtube@gmail.com">kado79.youtube@gmail.com</a></p>
 <p class="lang-nav"><a href="#ko-1">한국어</a> · <a href="./">App homepage</a></p>
 
 <h2>1. What this app is</h2>
@@ -173,7 +174,7 @@
 <table>
   <tr><th>Scope</th><th>Used for</th></tr>
   <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>Uploading videos (videos.insert) and setting thumbnails (thumbnails.set)</td></tr>
-  <tr><td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td><td>Uploading caption tracks (captions.insert), confirming the owner's channel (channels.list mine), checking the status of uploaded videos (videos.list), reading comments on the owner's own videos (commentThreads.list, comments.list), and posting replies as the channel (comments.insert)</td></tr>
+  <tr><td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td><td>Uploading caption tracks (captions.insert), confirming the owner's channel (channels.list mine), checking the status of uploaded videos (videos.list), reading comments on the owner's own videos (commentThreads.list, comments.list), posting replies as the channel (comments.insert), and changing an uploaded video's privacy status to public after processing (videos.update, status part only)</td></tr>
 </table>
 </div>
 <p>The app also reads the public list of video categories (videoCategories.list) to confirm that the "Education" category can be used.</p>
@@ -194,7 +195,7 @@
   </tr>
   <tr>
     <td>Content the owner uploads (video file, title, description, tags, category (Education), metadata and audio language (Korean), privacy status and scheduled publish time, "not made for kids" setting, altered or synthetic content disclosure, embedding allowed, standard YouTube license, notifying subscribers of the new video, thumbnail image, caption file with its track name ("한국어"), language (Korean) and immediate publishing)</td>
-    <td>Sent to YouTube only after the owner reviews it and tells the app to proceed. The default privacy status is "private"; only the value the owner chooses is used.</td>
+    <td>Sent to YouTube only after the owner reviews it and tells the app to proceed. The default privacy status is "private"; only the value the owner chooses is used. Only when the owner chooses "make public when processing finishes" does the app, after processing finishes, send that video's privacy status as "public" (the made-for-kids, license and embedding values already sent are sent again unchanged).</td>
     <td>The owner's original files stay on the owner's PC. The app makes no extra copies.</td>
   </tr>
   <tr>
@@ -262,7 +263,8 @@
 
 <h2>11. Effective date and changes</h2>
 <ul>
-  <li>This policy is effective from October 21, 2026. On the same day, sections 3, 4, 5, 6 and 9 were revised to add reading comments and posting replies, and the owner's consent is obtained again before these features are used.</li>
+  <li>This policy took effect on October 21, 2026. On the same day, sections 3, 4, 5, 6 and 9 were revised to add reading comments and posting replies, and the owner's consent was obtained again before these features were used.</li>
+  <li>October 23, 2026: the app's existing "make public after processing" call (videos.update) was missing from the scope table in section 3 and from section 4, and has been added. The app does not do anything new or handle any new information; the owner's consent is obtained again for this version.</li>
   <li>If the policy changes, this page will be updated and the effective date above will be changed. If information is to be used in a new way or for a new purpose, the updated policy will be announced and consent obtained again before that use.</li>
 </ul>
 </section>
