@@ -81,7 +81,7 @@
   <tr>
     <td>Upload result (video ID, video URL, YouTube Studio edit URL, video file name, upload time, title, requested privacy status and the privacy status returned by YouTube, scheduled publish time, thumbnail file name, caption track ID, YouTube error messages if a step failed, and a label marking the record as this channel's)</td>
     <td>Used to prevent uploading the same video twice and to check its status later.</td>
-    <td>The file <code>youtube.json</code> (for Shorts, <code>youtube-쇼츠.json</code>) in the episode folder under <code>outputs/Introduction_to_Korean_Culture/</code> on the owner's PC (never committed to the code repository). Values received from YouTube are refreshed from YouTube or deleted every 30 days. If the video has been deleted or the authorization has been revoked or has expired, the file is deleted within 7 days of that being confirmed.</td>
+    <td>The file <code>youtube.json</code> (for Shorts, <code>youtube-쇼츠.json</code>, and <code>youtube-쇼츠-2.json</code>·<code>youtube-쇼츠-3.json</code> when an episode has several Shorts) in the episode folder under <code>outputs/Introduction_to_Korean_Culture/</code> on the owner's PC (never committed to the code repository). Values received from YouTube are refreshed from YouTube or deleted every 30 days. If the video has been deleted or the authorization has been revoked or has expired, the file is deleted within 7 days of that being confirmed.</td>
   </tr>
   <tr>
     <td>Status of an uploaded video (title; YouTube status fields such as privacy and upload status, scheduled publish time, license, embedding, made-for-kids and synthetic-content settings, and failure or rejection reasons; processing status)</td>
@@ -201,7 +201,7 @@
   <tr>
     <td>업로드 결과(영상 ID·영상 주소·YouTube Studio 편집 주소·영상 파일 이름·업로드 시각·제목·요청한 공개 범위와 YouTube 가 돌려준 공개 범위·예약 공개 시각·썸네일 파일 이름·자막 트랙 ID, 단계가 실패했을 때는 YouTube 오류 메시지, 이 채널 기록이라는 표시)</td>
     <td>같은 영상을 두 번 올리지 않게 하고, 나중에 상태를 조회하기 위해 씁니다.</td>
-    <td>채널 주인 PC 의 <code>outputs/Introduction_to_Korean_Culture/</code> 아래 해당 편 폴더에 있는 <code>youtube.json</code> 파일(쇼츠는 <code>youtube-쇼츠.json</code>, 코드 저장소에 올리지 않습니다). YouTube 에서 받은 값은 30일마다 YouTube 에서 다시 받아 갱신하거나 지웁니다. 영상이 지워졌거나 승인이 철회·만료된 것을 확인하면 7일 안에 이 파일을 지웁니다.</td>
+    <td>채널 주인 PC 의 <code>outputs/Introduction_to_Korean_Culture/</code> 아래 해당 편 폴더에 있는 <code>youtube.json</code> 파일(쇼츠는 <code>youtube-쇼츠.json</code>, 한 편에 쇼츠가 여럿이면 <code>youtube-쇼츠-2.json</code>·<code>youtube-쇼츠-3.json</code> 도, 코드 저장소에 올리지 않습니다). YouTube 에서 받은 값은 30일마다 YouTube 에서 다시 받아 갱신하거나 지웁니다. 영상이 지워졌거나 승인이 철회·만료된 것을 확인하면 7일 안에 이 파일을 지웁니다.</td>
   </tr>
   <tr>
     <td>올린 영상의 상태(제목, 공개 상태·업로드 상태·예약 공개 시각·라이선스·퍼가기·아동용·합성 콘텐츠 설정과 실패·거부 사유 등 YouTube 의 상태 정보, 처리 상태)</td>
